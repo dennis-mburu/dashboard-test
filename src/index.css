@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.hide-disp{
+  display: none
+}
+
+.logo-container, .header-container{
+  height: 6rem;
+  /* background-color: rgb(74 222 128) */
+}
+
+.nav-item{
+  /* color: #738DA2; */
+  margin: 2rem;
+}
+
+.sidebar-container{
+  min-height: 100vh;
+  /* background-color: rgb(212 212 212); */
+  border-right-width: 1px;
+  border-color: rgb(229 229 229)
+}
