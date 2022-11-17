@@ -12,6 +12,7 @@ import CalculateOutlinedIcon from "@mui/icons-material/CalculateOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import TodayIcon from "@mui/icons-material/Today";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import Badge from "@mui/material/Badge";
 
 function App() {
   const [minimized, setMinimized] = useState(false);
@@ -83,16 +84,18 @@ function App() {
             </div>
           </div>
         </div>
-        <div className=" bg-red-300">
+        <div className=" ">
           <div className="flex items-center gap-8">
             <div className="header-container ">
               <button className="py-10 px-4" onClick={handleMinimize}>
                 <MenuIcon />
               </button>
             </div>
-            <div className="flex justify-items-end  gap-8">
+
+
+            <div className="flex justify-items-end  gap-8 ml-80 text-gray-400">
               <div className="flex">
-                <div className="py-2 px-6 border rounded-l-2xl border-r-neutral-200">
+                <div className="py-2 px-6 border rounded-l-2xl border-r-neutral-200 bg-[#475F7B]">
                   Today
                 </div>
                 <div className="py-2 px-6 border">Week</div>
@@ -104,20 +107,19 @@ function App() {
                 <div className="py-2 pl-6 pr-12">
                   <p>
                     <TodayIcon />
-                    <span className="mx-6">18 Oct -25 Oct 2020</span>
+                    <span className="mx-6 truncate">18 Oct -25 Oct 2020</span>
                   </p>
                 </div>
               </div>
               <div className="flex">
                 <div className="py-2 mr-4">
-                  <NotificationsNoneIcon />
+                  <Badge badgeContent={1} color="error">
+                    <NotificationsNoneIcon />
+                  </Badge>
                 </div>
                 <p className="py-2  mr-4">Your Name</p>
-                <div className="h-10 w-10  bg-slate-800 rounded-full mr-7">
-
-</div>
+                <div className="h-10 w-10  bg-[#475F7B] rounded-full mr-7"></div>
               </div>
-
             </div>
           </div>
         </div>
