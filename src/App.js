@@ -3,14 +3,15 @@ import { useState } from "react";
 
 import { FaChartPie } from "react-icons/fa";
 
-
 import InventoryOutlinedIcon from "@mui/icons-material/InventoryOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
 import GridViewIcon from "@mui/icons-material/GridView";
-import InsightsIcon from '@mui/icons-material/Insights';
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
-import CalculateOutlinedIcon from '@mui/icons-material/CalculateOutlined';
-import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import InsightsIcon from "@mui/icons-material/Insights";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import CalculateOutlinedIcon from "@mui/icons-material/CalculateOutlined";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import TodayIcon from "@mui/icons-material/Today";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 
 function App() {
   const [minimized, setMinimized] = useState(false);
@@ -50,7 +51,7 @@ function App() {
             </div>
             <div className="nav-item">
               <button>
-                <FaChartPie className="inline"/>
+                <FaChartPie className="inline" />
                 <span className={minimized ? "hide-disp" : "ml-3 mr-12"}>
                   Analytics
                 </span>
@@ -82,11 +83,42 @@ function App() {
             </div>
           </div>
         </div>
-        <div>
-          <div className="header-container">
-            <button className="py-10 px-4" onClick={handleMinimize}>
-              <MenuIcon />
-            </button>
+        <div className=" bg-red-300">
+          <div className="flex items-center gap-8">
+            <div className="header-container ">
+              <button className="py-10 px-4" onClick={handleMinimize}>
+                <MenuIcon />
+              </button>
+            </div>
+            <div className="flex justify-items-end  gap-8">
+              <div className="flex">
+                <div className="py-2 px-6 border rounded-l-2xl border-r-neutral-200">
+                  Today
+                </div>
+                <div className="py-2 px-6 border">Week</div>
+                <div className="py-2 px-6 border">Month</div>
+                <div className="py-2 px-6 border">Quater</div>
+                <div className="py-2 px-6 border">Year</div>
+              </div>
+              <div className="border rounded-md ">
+                <div className="py-2 pl-6 pr-12">
+                  <p>
+                    <TodayIcon />
+                    <span className="mx-6">18 Oct -25 Oct 2020</span>
+                  </p>
+                </div>
+              </div>
+              <div className="flex">
+                <div className="py-2 mr-4">
+                  <NotificationsNoneIcon />
+                </div>
+                <p className="py-2  mr-4">Your Name</p>
+                <div className="h-10 w-10  bg-slate-800 rounded-full mr-7">
+
+</div>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
