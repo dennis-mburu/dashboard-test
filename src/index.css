@@ -14,7 +14,7 @@
 
 .logo-container, .header-container{
   height: 6rem;
-  /* background-color: rgb(74 222 128) */
+  background-color: rgb(74 222 128)
 }
 
 .nav-item{
