@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
+import Grids from "./components/Grids";
 
 function App() {
   const [minimized, setMinimized] = useState(false);
@@ -16,8 +17,11 @@ function App() {
           <Sidebar minimized={minimized} />
         </div>
         <div className="main-container">
-          <div className="flex items-center gap-8 header-container">
+          <header className="flex items-center gap-8 header-container">
             <Header handleMinimize={handleMinimize} />
+          </header>
+          <div className="grids-container m-8">
+            <Grids />
           </div>
         </div>
       </div>
